@@ -11,3 +11,6 @@ RUN apt-get update \
     # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
     && apt-get -y install git openssh-client less iproute2 procps apt-transport-https gnupg2 curl lsb-release wget
 
+RUN apt install nodejs npm -y
+
+RUN npm install -g gulp-cli

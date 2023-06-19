@@ -8,3 +8,11 @@ section.intro, section.features-extra, section.rsvp {
 section.features, section.events, section.blog {
 	background: $section-dark;
 }
+
+
+.section-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

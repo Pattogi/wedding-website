@@ -4,6 +4,7 @@
 // Fonts
 
 $sans-serif: 'Open Sans', sans-serif;
+$headers: 'Aniron';
 $serif: Merriweather, Georgia, 'Times New Roman', serif;
 $accent-font: 'Nunito', sans-serif;
 
@@ -46,16 +47,19 @@ p {
 }
 
 h1 {
+  font-family: $headers;
   font-size: $font-size-h1;
 }
 
 h2 {
+  font-family: $headers;
   font-size: $font-size-h2;
   font-weight: $light;
   color: $h2-color;
 }
 
 h3 {
+  font-family: $headers;
   color: $h3-color;
   font-size: $font-size-h4;
   font-weight: $bold;
@@ -65,10 +69,12 @@ h3 {
 }
 
 h4 {
+  font-family: $headers;
   font-size: $font-size-h4;
 }
 
 h5 {
+  font-family: $headers;
   font-size: $font-size-h5;
   color: $h5-color;
   text-transform: uppercase;

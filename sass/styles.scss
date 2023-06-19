@@ -2,8 +2,18 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap);
 // Imports
 //@import "compass";
+
+@font-face {
+    font-family: 'Aniron';
+    src: url('../fonts/Aniron-7BaP.ttf');
+    /* src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg#flexslider-icon') format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+  }
+
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/colors";
@@ -23,6 +33,7 @@ Global Styles
 .no-margin {
   margin: 0;
 }
+
 a {
   color: $accent-color;
   -webkit-transition-timing-function: ease;
@@ -176,6 +187,10 @@ Waypoinsts
 /* ==========================================================================
 Navigation
 ========================================================================== */
+a {
+  font-family: $headers;
+}
+
 .header-nav.open {
   visibility: visible;
   opacity: 0.9;
@@ -293,7 +308,7 @@ Hero
 }
 .fixed {
   position: fixed;
-  background-color: rgba(55, 36, 40, .88);
+  background-color: rgba(75, 97, 24, 0.88);
   z-index: 999;
   width: 100%;
 }
@@ -329,7 +344,7 @@ header {
 
       a {
         color: $txt-light;
-        padding-right: 25px;
+        padding-right: 10px;
 
         &:hover {
           color: $accent-color;
@@ -561,10 +576,10 @@ Features-stack
   }
 
   .time {
-    font-size: 13px;
+    font-size: 15px;
     font-style: italic;
     text-transform: lowercase;
-    color: $txt-primary;
+    color: $txt-tertiary;
   }
 }
 

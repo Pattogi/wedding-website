@@ -67,6 +67,7 @@
   }
 
 p {
+    font-family: "Arial";
     font-size: 15px;
     line-height: 29px;
     color: rgba(28, 54, 83, .6);
@@ -74,16 +75,19 @@ p {
 }
 
 h1 {
+    font-family: "Aniron";
     font-size: 60px
 }
 
 h2 {
+    font-family: "Aniron";
     font-size: 40px;
     font-weight: 300;
     color: #3d4351
 }
 
 h3 {
+    font-family: "Aniron";
     color: #3d4351;
     font-size: 18px;
     font-weight: 700;
@@ -93,12 +97,14 @@ h3 {
 }
 
 h4 {
+    font-family: "Aniron";
     font-size: 18px
 }
 
 h5 {
+    font-family: "Aniron";
     font-size: 15px;
-    color: #3d4351;
+    color: #406614;
     text-transform: uppercase;
     font-weight: 500
 }
@@ -798,7 +804,7 @@ header .member-actions {
     font-size: 13px;
     font-style: italic;
     text-transform: lowercase;
-    color: rgba(28, 54, 83, .6)
+    color: #a79816
 }
 
 .blog {

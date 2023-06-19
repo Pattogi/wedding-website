@@ -61,6 +61,69 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"
         onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <!-- Gallery styling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+/* 
+body {
+  margin: 0;
+  font-family: Arial;
+} */
+
+/* The grid: Four equal columns that floats next to each other */
+.columnGallery {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.columnGallery img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.columnGallery img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.rowGallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.containerGallery {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+<!--End of gallery styling-->
 </head>
 
 <body id="top">
@@ -77,7 +140,7 @@
                         <nav>
                             <ul class="primary-nav">
                                 <li><a href="#intro">How we met</a></li>
-                                <li><a href="#events">Events</a></li>
+                                <li><a href="#events">Schedule</a></li>
                                 <li><a href="#instagram">Instagram</a></li>
                                 <li><a href="#eng-pics">Cheesy Pics</a></li>
                                 <li class="hidden-sm hidden-xs"><a href="#video-bg">Glimpse of the gardens</a></li>
@@ -528,7 +591,7 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                        max="4" placeholder="Plus ones/kids" required>
+                                        max="4" placeholder="Plus ones/kids (number of people)" required>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
@@ -540,19 +603,19 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-users"></i><input type="name" name="food" id="food"
-                                        class="" min="0" placeholder="What food are you bringing?" required>
+                                        class="" min="0" placeholder="Food you are bringing" required>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-users"></i><input type="name" name="allergies" id="allergies"
-                                        class="" min="0" placeholder="Any allergies or intolerances?" required>
+                                        class="" min="0" placeholder="Allergies or intolerances">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
                                     <i class="fa fa-users"></i><input type="name" name="extra_info" id="extra_info"
-                                        class="" min="0" placeholder="Anything else you would like to tell us?">
+                                        class="" min="0" placeholder="Anything else you would like to tell us">
                                 </div>
                             </div>
                         </div>
@@ -568,6 +631,54 @@
             </div>
         </div>
     </section>
+
+
+    <section>
+
+<div style="text-align:center">
+    <h2>Our story</h2>
+    <p>Click on the images below:</p>
+  </div>
+  
+<!-- Gallery-->
+  <div class="rowGallery">
+    <div class="columnGallery">
+      <img src="img/pics_of_us/kiss.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+      <img src="img/pics_of_us/got-ya-tongue.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+      <img src="img/pics_of_us/handfasting.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+      <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+        <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="columnGallery">
+        <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+  </div>
+  
+  <div class="containerGallery">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+  
+  <script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+  </script>
+    </section>
+<!--End of gallery-->
 
     <footer>
         <div class="container">

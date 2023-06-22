@@ -256,8 +256,8 @@ $(document).ready(function () {
     );
 
     if (
-      MD5($("#invite_code").val()) !== "b0e53b10c1f55ede516b240036b88f40" &&
-      MD5($("#invite_code").val()) !== "2ac7f43695eb0479d5846bb38eec59cc"
+      MD5($("#invite_code").val()) !== "d25767faf697199f99f0eef241b78226" &&
+      MD5($("#invite_code").val()) !== "becc5a38f58ad1ab7effbf9e02771f67"
     ) {
       $("#alert-wrapper").html(
         alert_markup(

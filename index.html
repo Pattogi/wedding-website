@@ -61,134 +61,6 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"
         onerror="loadCssFromCDN('font-awesome.css')">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
-    <!-- Gallery styling-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-/* 
-body {
-  margin: 0;
-  font-family: Arial;
-} */
-
-/* The grid: Four equal columns that floats next to each other */
-.columnGallery {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.columnGallery img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.columnGallery img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.rowGallery:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.containerGallery {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-#gallery-alt {
-  line-height: 0;
-  -webkit-column-count: 5; /* split it into 5 columns */
-  -webkit-column-gap: 5px; /* give it a 5px gap between columns */
-  -moz-column-count: 5;
-  -moz-column-gap: 5px;
-  column-count: 5;
-  column-gap: 5px;
-}
-
-#gallery-alt img {
-  width: 100% !important;
-  height: auto !important;
-  margin-bottom: 5px; /* to match column gap */
-}
-
-@media (max-width: 1200px) {
-  #gallery {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
-}
-
-@media (max-width: 1000px) {
-  #gallery {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-}
-
-@media (max-width: 800px) {
-  #gallery {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-}
-
-@media (max-width: 400px) {
-  #gallery {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
-}
-
-#darkbox {
-  width: 1280px;
-  height: 720px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #333;
-  overflow: hidden;
-  text-align: center;
-}
-.darkboximg {
-  padding: 5%;
-  max-width: 1216px;
-  max-height: 684px;
-}
-
-</style>
-<!--End of gallery styling-->
 </head>
 
 <body id="top">
@@ -814,10 +686,10 @@ body {
 
 
     <section id="our-story">
-        <!-- Gallery-->
 
 <div style="text-align:center">
     <h3>Our story</h3>
+    <br>
     <p>Logi and Patricia met in a cold December night, at the house of a common friend in Bournemouth. Patricia didn't think anything special of the meeting, but Logi felt instantly drawn to her. He was living in London at the time, so meeting-up wasn't as straight forward.
         <br>
         <br>
@@ -843,53 +715,22 @@ body {
         <br>
         <br>
         On the 3rd of June 2023, the couple decided to organise a handfasting ceremony and picnic in the forest with the company of a few very close friends. Something as simple as that became one of their favourite days ever.
-        ,<br>
+        <br>
         <br> 
         Music, books, animals, potatoes, nature, nerdiness, humour, open and honest communication, personal growth, respect for freedom and independence and immense love for each other have been constants and pillars in their relationship. Logi and Patricia know that life can be difficult, but that with each other's
         support, everything is easier and more fun.
     </p>
-    <p>Click on the images below:</p>
   </div>
-  
-  <div class="rowGallery">
-    <div class="columnGallery">
-      <img src="img/pics_of_us/kiss.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="columnGallery">
-      <img src="img/pics_of_us/got-ya-tongue.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="columnGallery">
-      <img src="img/pics_of_us/handfasting.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="columnGallery">
-      <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-    </div>
-    <div class="columnGallery">
-        <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-      </div>
-      <div class="columnGallery">
-        <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-      </div>
-  </div>
-  
-  <div class="containerGallery">
-    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-    <img id="expandedImg" style="width:100%">
-    <div id="imgtext"></div>
-  </div>
-  
-  <script>
-  function myFunction(imgs) {
-    var expandImg = document.getElementById("expandedImg");
-    var imgText = document.getElementById("imgtext");
-    expandImg.src = imgs.src;
-    imgText.innerHTML = imgs.alt;
-    expandImg.parentElement.style.display = "block";
-  }
-  </script>
-    </section>
-    <!--End of gallery-->
+  </section>
 
+ 
+<!-- Gallery-->
+ <section id="photo-gallery">
+    <div style="text-align:center">
+    <h3>Photo gallery</h3>
+    <br>
+    <br>
+    <p>Click on the images below (and click again on the image to close it):</p>
 <div id="gallery-alt">
   
     <img src="img/pics_of_us/handfasting.jpg">
@@ -899,6 +740,8 @@ body {
     <img src="img/pics_of_us/kiss.jpg">
    
    </div>
+    </div>
+</section>
   
 
     <footer>

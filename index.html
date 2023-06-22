@@ -752,48 +752,77 @@ body {
     <section id="our-story">
         <!-- Gallery-->
 
-        <div style="text-align:center">
-            <h3>Our story</h3>
-            <p>Click on the images below:</p>
-        </div>
-
-        <div class="rowGallery">
-            <div class="columnGallery">
-                <img src="img/pics_of_us/kiss.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="columnGallery">
-                <img src="img/pics_of_us/got-ya-tongue.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="columnGallery">
-                <img src="img/pics_of_us/handfasting.jpg" alt="Mountains" style="width:100%"
-                    onclick="myFunction(this);">
-            </div>
-            <div class="columnGallery">
-                <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="columnGallery">
-                <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="columnGallery">
-                <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-            </div>
-        </div>
-
-        <div class="containerGallery">
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <img id="expandedImg" style="width:100%">
-            <div id="imgtext"></div>
-        </div>
-
-        <script>
-            function myFunction(imgs) {
-                var expandImg = document.getElementById("expandedImg");
-                var imgText = document.getElementById("imgtext");
-                expandImg.src = imgs.src;
-                imgText.innerHTML = imgs.alt;
-                expandImg.parentElement.style.display = "block";
-            }
-        </script>
+<div style="text-align:center">
+    <h3>Our story</h3>
+    <p>Logi and Patricia met in a cold December night, at the house of a common friend in Bournemouth. Patricia didn't think anything special of the meeting, but Logi felt instantly drawn to her. He was living in London at the time, so meeting-up wasn't as straight forward.
+        <br>
+        <br>
+        Over the following months, they exchanged a few messages and almost went to see a band together in Saint Valentine's day, but Patricia opted for going on a date with her best girl-friend instead.
+        <br>
+        <br>
+        Some more time passed, and lockdown hit. Solitude and too much free time brought the two of them closer together. Nights of long videocalls, talking about nothing and everything and, most importantly, nights of playing videogames in which they would throw each other off cliffs and have a good laugh. 
+        There are no words to explain how much this helped both of them through such hard times.
+        <br>
+        <br>
+        Once lockdown was over, Logi decided to pay Patty a visit in Bournemouth, and they went to their first date to the New Forest, where they walked amongst trees, laid down on the moss and Patricia got pooped 
+        over by a slow worm (after having been wisely warned by Logi that that might happen). That weekend of June, the two of them realised they were made for each other, and decided to start dating.
+        <br>
+        <br>
+        On Christmas 2020, Patricia made a handfasting chord for Logi and asked him if we would like to get handfasted. Handfasting is an ancient celtic tradition involving a ritual binding of the couple as symbol of their commitment to each other for one year, 
+        after which time the couple would decide to get married or end their time together. Needless to say, Logi answered yes.
+        <br>
+        <br>
+        Many dates, adventures, parties and walks in the forest later, the couple decided to move in together.
+        After some more time, one day, Logi appeared with a huge slate of wood wrapped in plastic. Patricia decided that she wasn't even going to ask about it. But to her surprise, it turned out to be an astonishing piece of pyrography Patricia had fell in love with the year
+        before at a festival, and jokingly said that if he ever wanted to marry her, to do it with something like that instead of a ring. She really didn't expect him to actually do it! Now, the artwork is proudly displayed at their home as the most gorgeous engagement 
+        headboard ever.
+        <br>
+        <br>
+        On the 3rd of June 2023, the couple decided to organise a handfasting ceremony and picnic in the forest with the company of a few very close friends. Something as simple as that became one of their favourite days ever.
+        ,<br>
+        <br> 
+        Music, books, animals, potatoes, nature, nerdiness, humour, open and honest communication, personal growth, respect for freedom and independence and immense love for each other have been constants and pillars in their relationship. Logi and Patricia know that life can be difficult, but that with each other's
+        support, everything is easier and more fun.
+    </p>
+    <p>Click on the images below:</p>
+  </div>
+  
+  <div class="rowGallery">
+    <div class="columnGallery">
+      <img src="img/pics_of_us/kiss.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+      <img src="img/pics_of_us/got-ya-tongue.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+      <img src="img/pics_of_us/handfasting.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+      <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="columnGallery">
+        <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="columnGallery">
+        <img src="img/pics_of_us/tiny-snowman.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+      </div>
+  </div>
+  
+  <div class="containerGallery">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+  
+  <script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+  </script>
     </section>
     <!--End of gallery-->
 

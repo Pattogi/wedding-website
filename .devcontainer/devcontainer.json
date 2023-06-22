@@ -11,9 +11,9 @@
         }
     },
     "runArgs": [
-        "--userns=keep-id:uid=1000,gid=1000",
-        // disable selinux isolation that breaks bind mounts
-        "--security-opt=label=disable"
+        // "--userns=keep-id:uid=1000,gid=1000",
+        // // disable selinux isolation that breaks bind mounts
+        // "--security-opt=label=disable"
     ],
     "containerUser": "vscode",
     "updateRemoteUserUID": true,
@@ -24,7 +24,8 @@
         "vscode": {
             "extensions": [
 				"ms-azuretools.vscode-docker",
-				"ritwickdey.LiveServer"
+				"ritwickdey.LiveServer",
+				"loiane.frontend-extension-pack"
 			]
         }
     },

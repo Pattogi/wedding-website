@@ -267,7 +267,7 @@ $(document).ready(function () {
       );
     } else {
       $.post(
-        "https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec",
+        "https://script.google.com/macros/s/AKfycbyEcCvcrFc9ohPwHy1WfXGJBj29pbc3J1-vIZ9tked6Lat-LoEn4iY_fnsCc_t9DU-W/exec",
         data
       )
         .done(function (data) {

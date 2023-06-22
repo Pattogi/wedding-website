@@ -122,6 +122,71 @@ body {
   font-size: 35px;
   cursor: pointer;
 }
+
+#gallery-alt {
+  line-height: 0;
+  -webkit-column-count: 5; /* split it into 5 columns */
+  -webkit-column-gap: 5px; /* give it a 5px gap between columns */
+  -moz-column-count: 5;
+  -moz-column-gap: 5px;
+  column-count: 5;
+  column-gap: 5px;
+}
+
+#gallery-alt img {
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 5px; /* to match column gap */
+}
+
+@media (max-width: 1200px) {
+  #gallery {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  #gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  #gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  #gallery {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+#darkbox {
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow: hidden;
+  text-align: center;
+}
+.darkboximg {
+  padding: 5%;
+  max-width: 1216px;
+  max-height: 684px;
+}
+
 </style>
 <!--End of gallery styling-->
 </head>
@@ -825,6 +890,17 @@ body {
     </section>
     <!--End of gallery-->
 
+<div id="gallery-alt">
+  
+    <img src="img/pics_of_us/handfasting.jpg">
+    <img src="img/pics_of_us/tiny-snowman.jpg">
+    <img src="img/pics_of_us/got-ya-tongue.jpg">
+    <img src="img/pics_of_us/kiss.jpg">
+    <img src="img/pics_of_us/kiss.jpg">
+   
+   </div>
+  
+
     <footer>
         <div class="container">
             <div class="row">
@@ -862,6 +938,48 @@ body {
         ga('create', 'UA-46465113-4', 'auto');
         ga('send', 'pageview');
     </script>
+    <script>
+        let darkBoxVisible = false;
+        function showDarkbox(url) {
+            if(!darkBoxVisible) {
+                let x = (window.innerWidth - 1280) / 2;
+                let y = window.scrollY + 50;
+                // Create the darkBox
+                var div = document.createElement("div");
+                div.id = "darkbox";
+                div.innerHTML = '<img class="darkboximg" src="'+url+'" />';
+                document.body.appendChild(div);
+                let box = document.getElementById("darkbox");
+                box.style.left = x.toString()+"px";
+                box.style.top = y.toString()+"px";
+                box.style.height = 'auto';
+                box.addEventListener('click', (event) => {
+                // Remove it
+                let element = document.getElementById("darkbox");
+                element.parentNode.removeChild(element);
+                darkBoxVisible = false;
+                })
+                darkBoxVisible = true;
+            } else {
+                // Remove it
+                let element = document.getElementById("darkbox");
+                element.parentNode.removeChild(element);
+                darkBoxVisible = false;
+            }
+        }
+
+        window.addEventListener('load', (event) => {
+            let images = document.querySelectorAll("img");
+            if(images !== null && images !== undefined && images.length > 0) {
+                images.forEach(function(img) {
+                img.addEventListener('click', (evt) => {
+                showDarkbox(img.src);
+                });
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

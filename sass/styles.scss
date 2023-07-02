@@ -357,7 +357,7 @@ header {
     display: inline-block;
   }
   .logo img {
-    height: 19px;
+    height: 100px;
   }
   ul.primary-nav {
     margin: 0 0 0 75px;
@@ -940,4 +940,15 @@ body.modal-open {
   padding: 5%;
   max-width: 1216px;
   max-height: 684px;
+}
+
+/* IMAGES */
+.responsive {
+  width: 60%;
+  height: auto;
+}
+
+.main-image {
+  width: 80%;
+  height: auto;
 }

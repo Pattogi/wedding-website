@@ -1,74 +1,74 @@
-name: NodeJS with Gulp
+# name: NodeJS with Gulp
 
-on:
-  workflow_dispatch:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches: [ "master" ]
+#   pull_request:
+#     branches: [ "master" ]
     
-permissions:
-  id-token: write # This is required for requesting the JWT
-  contents: write # This is required for actions/checkout
+# permissions:
+#   id-token: write # This is required for requesting the JWT
+#   contents: write # This is required for actions/checkout
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
+#     strategy:
+#       matrix:
+#         node-version: [18.x]
 
-    steps:
-    - uses: actions/checkout@v3
+#     steps:
+#     - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: ${{ matrix.node-version }}
 
-    - name: Build
-      run: |
-        npm install
-        gulp
+#     - name: Build
+#       run: |
+#         npm install
+#         gulp
 
-    - name: Archive artifact
-      shell: bash
-      run: |
-        mkdir -p dist
-        tar \
-          --dereference --hard-dereference \
-          -czvf "$RUNNER_TEMP/artifact.tar" \
-          index.html \
-          css \
-          js \
-          img
+#     - name: Archive artifact
+#       shell: bash
+#       run: |
+#         mkdir -p dist
+#         tar \
+#           --dereference --hard-dereference \
+#           -czvf "$RUNNER_TEMP/artifact.tar" \
+#           index.html \
+#           css \
+#           js \
+#           img
           
-    - name: Upload Pages artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: 'github-pages'
-        path: ${{ runner.temp }}/artifact.tar
-        retention-days: 1
-        if-no-files-found: error
+#     - name: Upload Pages artifact
+#       uses: actions/upload-artifact@v3
+#       with:
+#         name: 'github-pages'
+#         path: ${{ runner.temp }}/artifact.tar
+#         retention-days: 1
+#         if-no-files-found: error
         
-  deploy:
-    # Depend on build outcome
-    needs: build
+#   deploy:
+#     # Depend on build outcome
+#     needs: build
 
-     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+#      # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+#     permissions:
+#       pages: write      # to deploy to Pages
+#       id-token: write   # to verify the deployment originates from an appropriate source
 
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+#     # Deploy to the github-pages environment
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
 
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+#     # Specify runner + deployment step
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Deploy to GitHub Pages
+#         id: deployment
+#         uses: actions/deploy-pages@v2
